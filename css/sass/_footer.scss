@@ -1,0 +1,108 @@
+footer{
+   margin-top: 5rem;
+   background: $black;
+   .container,
+   .container nav,
+   .container nav .nav-list,
+   .container .copy{
+      @include d-flex(space-between, center, column);
+   }
+   .container{
+      nav{
+         margin-top: 2rem;
+         .logo{
+            width: 10rem;
+         }
+         .nav-list{
+            margin-top: 1rem;
+            .nav-item{
+               margin: .5rem 0;
+               .nav-link{
+                  padding: .5rem;
+                  font-family: 'Alata', sans-serif;
+                  text-decoration: none;
+                  color: $white;
+                  font-size: 1.2rem;
+               }
+            }
+         }
+      }
+      .copy{
+         margin-top: 2rem;
+         .links{
+            width: 100%;
+            @include d-flex(space-evenly, center, row);
+         }
+         span{
+            margin: 1rem 0 2rem 0;
+            color: $darkGray;
+            font-family: 'Alata', sans-serif;
+            font-size: 1rem;
+         }
+      }
+   }
+}
+
+@media (min-width: $medium){
+   footer{
+      .container nav .nav-list .nav-item .nav-link,
+      .container .copy .links a{
+         &::after{
+            content: '';
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2rem;
+            height: 0.05rem;
+            background-color: $white;
+         }
+         &:hover::after{
+            display: block;
+         }
+      }
+      .container{
+         flex-direction: row;
+         nav{
+            align-items: flex-start;
+            margin: 3rem 0;
+            .nav-list{
+               .nav-item{
+                  margin: .5rem;
+                  &:first-child{
+                     margin-left: 0;
+                  }
+                  .nav-link{
+                     position: relative;
+                     &:first-child{
+                        padding-left: 0;
+                     }
+                  }
+               }
+               flex-direction: row;
+            }
+         }
+         .copy{
+            align-items: flex-end;
+            .links{
+               width: 100%;
+               justify-content: flex-end;
+               a{
+                  position: relative;
+                  margin: 0 1rem;
+                  &:last-child{
+                     margin-right: 0;
+                  }
+               }
+            }
+            span{
+               margin: 1rem 0 2rem 0;
+               color: $darkGray;
+               font-family: 'Alata', sans-serif;
+               font-size: 1rem;
+            }
+         }
+      }
+   }
+}

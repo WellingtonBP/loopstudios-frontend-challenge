@@ -1,0 +1,63 @@
+section.interactive{
+   margin-top: 5rem;
+   .container{
+      @include d-flex(space-between, center, column);
+      img{
+         width: 100%;
+      }
+      article{
+         margin-top: 2rem;
+         padding: 1rem;
+         text-align: center;
+         h1{
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 2.4rem;
+         }
+         p{
+            font-family: 'Alata', sans-serif;
+            margin-top: 1rem;
+            color: $veryDarkGray;
+         }
+      }
+   }
+}
+
+@media (min-width: $medium){
+   section.interactive{
+      .container{
+         display: block;
+         background: url("../images/desktop/image-interactive.jpg") no-repeat left top;
+         padding-top: 8rem;
+         overflow: auto;
+         img{
+            display: none;
+         }
+         article{
+            width: 60%;
+            padding: 3rem;
+            background-color: white;
+            float: right;
+            text-align: left;
+         }
+      }
+   }
+}
+
+@media (min-width: $large){
+   section.interactive{
+      .container{
+         padding-top: 10rem;
+         article{
+            width: 55%;
+            h1{
+               font-size: 3.4rem;
+            }
+            p{
+               font-size: 1.2rem;
+            }
+         }
+      }
+   }
+}

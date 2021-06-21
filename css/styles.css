@@ -1,0 +1,455 @@
+:root {
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+header {
+  padding: 1rem 0;
+  background: url("../images/mobile/image-hero.jpg") no-repeat center;
+  background-size: cover;
+}
+header .container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container nav .logo {
+  width: 10rem;
+  z-index: 10;
+}
+header .container nav .navbar-nav .navbar-toggler {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 10;
+  position: relative;
+}
+header .container nav .navbar-nav .navbar-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0%;
+  left: 0%;
+}
+header .container nav .navbar-nav .navbar-menu .nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  list-style: none;
+}
+header .container nav .navbar-nav .navbar-menu .nav-list .nav-item {
+  margin: 0.8rem 1.2rem;
+}
+header .container nav .navbar-nav .navbar-menu .nav-list .nav-item .nav-link {
+  padding: 0.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.3rem;
+}
+header .container nav .navbar-nav .navbar-menu.open {
+  display: block;
+}
+header .container .hero {
+  border: 1px solid white;
+  padding: 1rem;
+  margin: 6rem 0;
+}
+header .container .hero h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 2.8rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    background: url("../images/desktop/image-hero.jpg") no-repeat center top;
+    background-size: cover;
+  }
+  header .container nav .navbar-nav .navbar-toggler {
+    display: none;
+  }
+  header .container nav .navbar-nav .navbar-menu {
+    display: block;
+    position: initial;
+    background-color: transparent;
+  }
+  header .container nav .navbar-nav .navbar-menu .nav-list {
+    flex-direction: row;
+  }
+  header .container nav .navbar-nav .navbar-menu .nav-list .nav-item .nav-link {
+    text-transform: initial;
+    position: relative;
+  }
+  header .container nav .navbar-nav .navbar-menu .nav-list .nav-item .nav-link::after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 0.05rem;
+    background-color: white;
+  }
+  header .container nav .navbar-nav .navbar-menu .nav-list .nav-item .nav-link:hover::after {
+    display: block;
+  }
+  header .container .hero {
+    width: 60%;
+  }
+  header .container .hero h1 {
+    font-size: 3.9rem;
+  }
+}
+@media (min-width: 992px) {
+  header .container .hero {
+    padding: 1.5rem;
+    width: 50%;
+  }
+}
+section.interactive {
+  margin-top: 5rem;
+}
+section.interactive .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+section.interactive .container img {
+  width: 100%;
+}
+section.interactive .container article {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+section.interactive .container article h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+section.interactive .container article p {
+  font-family: "Alata", sans-serif;
+  margin-top: 1rem;
+  color: dimgray;
+}
+
+@media (min-width: 768px) {
+  section.interactive .container {
+    display: block;
+    background: url("../images/desktop/image-interactive.jpg") no-repeat left top;
+    padding-top: 8rem;
+    overflow: auto;
+  }
+  section.interactive .container img {
+    display: none;
+  }
+  section.interactive .container article {
+    width: 60%;
+    padding: 3rem;
+    background-color: white;
+    float: right;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  section.interactive .container {
+    padding-top: 10rem;
+  }
+  section.interactive .container article {
+    width: 55%;
+  }
+  section.interactive .container article h1 {
+    font-size: 3.4rem;
+  }
+  section.interactive .container article p {
+    font-size: 1.2rem;
+  }
+}
+section.creations {
+  margin-top: 5rem;
+}
+section.creations .container {
+  display: grid;
+  grid-template: repeat(2, auto)/100%;
+  row-gap: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+section.creations .container h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+section.creations .container .imgs {
+  display: grid;
+  grid-template: repeat(8, 11rem)/100%;
+  row-gap: 1rem;
+}
+section.creations .container .imgs .img {
+  cursor: pointer;
+  position: relative;
+  background-size: cover;
+}
+section.creations .container .imgs .img:nth-child(1) {
+  background: url("../images/mobile/image-deep-earth.jpg") no-repeat center;
+}
+section.creations .container .imgs .img:nth-child(2) {
+  background: url("../images/mobile/image-night-arcade.jpg") no-repeat center;
+}
+section.creations .container .imgs .img:nth-child(3) {
+  background: url("../images/mobile/image-soccer-team.jpg") no-repeat center;
+}
+section.creations .container .imgs .img:nth-child(4) {
+  background: url("../images/mobile/image-grid.jpg") no-repeat center;
+}
+section.creations .container .imgs .img:nth-child(5) {
+  background: url("../images/mobile/image-from-above.jpg") no-repeat center;
+}
+section.creations .container .imgs .img:nth-child(6) {
+  background: url("../images/mobile/image-pocket-borealis.jpg") no-repeat center;
+}
+section.creations .container .imgs .img:nth-child(7) {
+  background: url("../images/mobile/image-curiosity.jpg") no-repeat center;
+}
+section.creations .container .imgs .img:nth-child(8) {
+  background: url("../images/mobile/image-fisheye.jpg") no-repeat center;
+}
+section.creations .container .imgs .img span {
+  font-weight: 300;
+  display: block;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  text-align: left;
+  width: 50%;
+  font-size: 1.8rem;
+  color: white;
+  z-index: 10;
+}
+section.creations .container a {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.8rem 0;
+  width: 12rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+}
+
+@media (min-width: 768px) {
+  section.creations .container {
+    align-items: center;
+    grid-template: repeat(2, auto)/repeat(2, 50%);
+    grid-template-areas: "h1text btn" "imgs imgs";
+  }
+  section.creations .container h1 {
+    grid-area: h1text;
+    justify-self: flex-start;
+  }
+  section.creations .container .imgs {
+    grid-area: imgs;
+    column-gap: 1rem;
+    grid-template: repeat(2, 25rem)/repeat(4, 1fr);
+  }
+  section.creations .container .imgs .img {
+    background-size: cover !important;
+  }
+  section.creations .container .imgs .img:nth-child(1) {
+    background: url("../images/desktop/image-deep-earth.jpg") no-repeat center;
+  }
+  section.creations .container .imgs .img:nth-child(2) {
+    background: url("../images/desktop/image-night-arcade.jpg") no-repeat center;
+  }
+  section.creations .container .imgs .img:nth-child(3) {
+    background: url("../images/desktop/image-soccer-team.jpg") no-repeat center;
+  }
+  section.creations .container .imgs .img:nth-child(4) {
+    background: url("../images/desktop/image-grid.jpg") no-repeat center;
+  }
+  section.creations .container .imgs .img:nth-child(5) {
+    background: url("../images/desktop/image-from-above.jpg") no-repeat center;
+  }
+  section.creations .container .imgs .img:nth-child(6) {
+    background: url("../images/desktop/image-pocket-borealis.jpg") no-repeat center;
+  }
+  section.creations .container .imgs .img:nth-child(7) {
+    background: url("../images/desktop/image-curiosity.jpg") no-repeat center;
+  }
+  section.creations .container .imgs .img:nth-child(8) {
+    background: url("../images/desktop/image-fisheye.jpg") no-repeat center;
+  }
+  section.creations .container .imgs .img span {
+    left: 2rem;
+    bottom: 1.5rem;
+    transition: 0.1s;
+  }
+  section.creations .container .imgs .img::after {
+    transition: 0.2s;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8c8c8c;
+    opacity: 0;
+  }
+  section.creations .container .imgs .img:hover span {
+    color: black;
+    font-weight: 600;
+  }
+  section.creations .container .imgs .img:hover::after {
+    opacity: 0.7;
+  }
+  section.creations .container a {
+    grid-area: btn;
+    margin: 0;
+    justify-self: flex-end;
+    transition: 0.35s;
+  }
+  section.creations .container a:hover {
+    background-color: black;
+    color: white;
+  }
+}
+@media (min-width: 992px) {
+  section.creations .container .imgs {
+    grid-template: repeat(2, 30rem)/repeat(4, 1fr);
+  }
+}
+footer {
+  margin-top: 5rem;
+  background: black;
+}
+footer .container,
+footer .container nav,
+footer .container nav .nav-list,
+footer .container .copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container nav {
+  margin-top: 2rem;
+}
+footer .container nav .logo {
+  width: 10rem;
+}
+footer .container nav .nav-list {
+  margin-top: 1rem;
+}
+footer .container nav .nav-list .nav-item {
+  margin: 0.5rem 0;
+}
+footer .container nav .nav-list .nav-item .nav-link {
+  padding: 0.5rem;
+  font-family: "Alata", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+footer .container .copy {
+  margin-top: 2rem;
+}
+footer .container .copy .links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .container .copy span {
+  margin: 1rem 0 2rem 0;
+  color: #8c8c8c;
+  font-family: "Alata", sans-serif;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  footer .container nav .nav-list .nav-item .nav-link::after,
+footer .container .copy .links a::after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 0.05rem;
+    background-color: white;
+  }
+  footer .container nav .nav-list .nav-item .nav-link:hover::after,
+footer .container .copy .links a:hover::after {
+    display: block;
+  }
+  footer .container {
+    flex-direction: row;
+  }
+  footer .container nav {
+    align-items: flex-start;
+    margin: 3rem 0;
+  }
+  footer .container nav .nav-list {
+    flex-direction: row;
+  }
+  footer .container nav .nav-list .nav-item {
+    margin: 0.5rem;
+  }
+  footer .container nav .nav-list .nav-item:first-child {
+    margin-left: 0;
+  }
+  footer .container nav .nav-list .nav-item .nav-link {
+    position: relative;
+  }
+  footer .container nav .nav-list .nav-item .nav-link:first-child {
+    padding-left: 0;
+  }
+  footer .container .copy {
+    align-items: flex-end;
+  }
+  footer .container .copy .links {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  footer .container .copy .links a {
+    position: relative;
+    margin: 0 1rem;
+  }
+  footer .container .copy .links a:last-child {
+    margin-right: 0;
+  }
+  footer .container .copy span {
+    margin: 1rem 0 2rem 0;
+    color: #8c8c8c;
+    font-family: "Alata", sans-serif;
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
